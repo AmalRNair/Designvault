@@ -1,0 +1,263 @@
+/* Get Started Modal Styles */
+.designvault-modal {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.designvault-modal .modal-header {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  border-bottom: none;
+  padding: 30px;
+  text-align: center;
+}
+
+.designvault-modal .modal-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.designvault-modal .btn-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  filter: invert(1);
+}
+
+.designvault-modal .btn-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.designvault-modal .modal-body {
+  padding: 40px;
+  background-color: #fafbfc;
+}
+
+.modal-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.designvault-form .form-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.designvault-form .form-control {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.designvault-form .form-control:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.designvault-form .form-control::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.designvault-form select.form-control {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 45px;
+}
+
+.designvault-form textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.designvault-form .submit-btn {
+  height: 55px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.designvault-form .submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.4);
+}
+
+.designvault-form .submit-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Loading state */
+.designvault-form .submit-btn.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.designvault-form .submit-btn.loading span {
+  opacity: 0;
+}
+
+.designvault-form .submit-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success state */
+.form-success {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.form-success .success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.form-success .success-icon i {
+  color: white;
+  font-size: 32px;
+}
+
+.form-success h3 {
+  color: #374151;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-success p {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 1rem;
+  }
+  
+  .designvault-modal .modal-header {
+    padding: 25px 20px;
+  }
+  
+  .designvault-modal .modal-title {
+    font-size: 24px;
+  }
+  
+  .designvault-modal .modal-body {
+    padding: 30px 20px;
+  }
+  
+  .modal-subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  .designvault-modal .modal-header {
+    padding: 20px 15px;
+  }
+  
+  .designvault-modal .modal-title {
+    font-size: 20px;
+  }
+  
+  .designvault-modal .modal-body {
+    padding: 25px 15px;
+  }
+  
+  .designvault-form .form-control {
+    padding: 12px 15px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Dark mode support (if needed) */
+.dark .designvault-modal .modal-body {
+  background-color: #1f2937;
+}
+
+.dark .designvault-form .form-control {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.dark .designvault-form .form-control:focus {
+  border-color: #667eea;
+  background-color: #374151;
+}
+
+.dark .designvault-form .form-label {
+  color: #f9fafb;
+}
+
+.dark .modal-subtitle {
+  color: #9ca3af;
+}
