@@ -1078,10 +1078,6 @@ a.log-in-btn:hover:after {
   color: var(--secondary-color);
 }
 
-.Designvault-hero-thumb img {
-  border-radius: 16px 16px 0px 0px;
-}
-
 /* How We Work Section Styles */
 .how-we-work-section {
   /* background-color: #fafbfc; */
@@ -1257,5 +1253,88 @@ a.log-in-btn:hover:after {
   /* Hide images on mobile screens */
   .how-we-work-image {
     display: none;
+  }
+}
+
+/* Hero Banner Animation Styles */
+.hero-banner-container {
+  width: 100% !important;
+  overflow: hidden !important;
+  margin-top: 60px;
+  position: relative;
+  height: 500px !important; /* Increased height for better visibility */
+  background: transparent;
+  border-radius: 16px;
+}
+
+.hero-banner-scroll {
+  display: flex !important;
+  animation: scrollLeft 25s linear infinite;
+  width: 200% !important; /* Double width to create seamless loop */
+  height: 100%;
+  will-change: transform; /* Optimize animation performance */
+}
+
+
+.hero-banner-image {
+  width: 50% !important; /* Half of the container to fill the viewport */
+  height: 100% !important; /* Match container height */
+  object-fit: cover;
+  border-radius: 16px;
+  margin-right: 0;
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hero-banner-image:hover {
+  transform: scale(1.02); /* Subtle zoom on hover */
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Override hero section background with orange gradient */
+.Designvault-hero-section {
+  background: linear-gradient(to top, #f97316, rgba(249, 115, 22, 0.1), transparent) !important;
+  background-color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-banner-container {
+    height: 600px !important;
+    margin-top: 40px;
+  }
+  
+  .hero-banner-image {
+    height: 800px !important;
+  }
+  
+  .hero-banner-scroll {
+    animation-duration: 20s; /* Faster on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner-container {
+    height: 200px !important;
+    margin-top: 30px;
+  }
+  
+  .hero-banner-image {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+  }
+  
+  .hero-banner-scroll {
+    animation-duration: 18s; /* Even faster on small screens */
   }
 }
